@@ -1,0 +1,121 @@
+* {
+    cursor: url("icons/fish.png") 48 48, auto;
+}
+
+body {
+    padding: 0;
+    background-image: url("covers/bg3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: 'Press Start 2P', system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 45px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    box-sizing: border-box;
+    z-index: 1000;
+    -webkit-app-region: drag;
+}
+
+.drag-region {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color:rgb(243, 243, 243);
+    flex-grow: 1;
+}
+
+.window-controls {
+    margin-left: 220px;
+    flex-grow: 1;
+    display: flex;
+    -webkit-app-region: drag;
+}
+
+.window-controls button {
+    background: transparent;
+    border: none;
+    padding: 7px;
+    cursor: url("icons/fish.png") 48 48, pointer;
+    -webkit-app-region: no-drag;
+}
+
+.window-controls img {
+    width: 38px;
+    height: 38px;
+    filter: drop-shadow(1px 1px 2px #584D3D);
+}
+
+.cover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    margin-top: 40px;
+    margin-bottom: -5px;
+    border-radius: 6px;
+}
+
+.img-button {
+    background: none;
+    border: none;
+    padding: 2px;
+    cursor: url("icons/fish.png") 48 48, pointer;
+}
+
+.img-button img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s;
+}
+
+.img-button img:hover {
+    transform: scale(1.1);
+}
+
+.player-container {
+    padding: 20px;
+    width: 300px;
+}
+
+.screen {
+    text-align: center;
+}
+
+.song-title {
+    font-size: 12px;
+    font-family: 'Press Start 2P', system-ui;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    margin-top: 10px;
+    height: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background:#ce92ee;
+    width: 0%;
+}

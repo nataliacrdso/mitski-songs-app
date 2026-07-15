@@ -1,0 +1,47 @@
+{
+  "name": "mitski-songs-app",
+  "version": "1.0.0",
+  "description": "Desktop music player featuring only Mitski songs",
+  "main": "main.js",
+
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+
+  "keywords": [
+    "electron",
+    "music-player",
+    "desktop-app",
+    "pixel-art",
+    "mitski"
+  ],
+
+  "author": "natgeode",
+  "license": "MIT",
+
+  "devDependencies": {
+    "electron": "^43.1.0",
+    "electron-builder": "^26.15.3"
+  },
+
+  "build": {
+    "appId": "com.natgeode.mitskisongsapp",
+    "productName": "Mitski Songs App",
+
+    "directories": {
+      "output": "dist"
+    },
+
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!node_modules/.cache/**"
+    ],
+
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    }
+  }
+}
